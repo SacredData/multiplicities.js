@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/SacredData/multiplicities.js/issues"
   },
-  "homepage": "https://github.com/SacredData/multiplicities.js#readme"
+  "homepage": "https://github.com/SacredData/multiplicities.js#readme",
+  "dependencies": {
+    "supercolliderjs": "^1.0.1"
+  }
 }

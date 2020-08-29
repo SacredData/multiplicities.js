@@ -1,0 +1,4 @@
+sclang: /usr/bin/sclang
+scsynth: /usr/bin/scsynth
+echo: true
+debug: false
