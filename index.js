@@ -1,9 +1,26 @@
-const sc = require('supercolliderjs');
+const sc = require('supercolliderjs')
 
-sc.server.boot().then((server) => {
+sc.server.boot().then(async server => {
 
-  // Compile synthDef from a file
-  let lDefs = server.loadSynthDef('l1', './defs/l.scd');
-  let inputDef = server.loadSynthDef('input', './defs/input.scd');
-  console.log(lDefs, inputDef);
-});
+  let { lDef, inDef, grainDef, clockDef, reverbDef } = await server.synthDefs({
+    l1: {
+      path: './defs/l.scd'
+    },
+    input: {
+      path: './defs/input.scd'
+    },
+    granularSampling: {
+      path: './defs/grains.scd'
+    },
+    grainAsr: {
+      path: './defs/grains2.scd'
+    },
+    serverClock: {
+      path: './defs/serverClock.scd'
+    },
+    reverb: {
+      path: './defs/reverb.scd'
+    }
+  })
+})
+
